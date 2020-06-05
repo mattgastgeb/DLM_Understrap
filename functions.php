@@ -33,3 +33,10 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+function wpb_add_google_fonts() {
+
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400&display=swap', false ); 
+}
+
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
