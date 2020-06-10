@@ -1,0 +1,35 @@
+#wrapper-footer-full {
+  background: $dark;
+  color: $white;
+  padding: ($grid-gutter-width * 2) 0 0;
+
+  .col-md-3 {
+    margin-bottom: $grid-gutter-width * 2;
+  }
+
+  p:last-child {
+    margin: 0;
+  }
+
+  .logo {
+    max-width: 226px;
+  }
+}
+
+#wrapper-footer {
+  background: $dark;
+  color: $white;
+  padding: 0 0 ($grid-gutter-width * 2);
+
+  .disclaimer {
+    margin-bottom: ($grid-gutter-width * 2);
+
+    p {
+      font-size: 0.75rem;
+
+      &:last-child {
+        margin:0;
+      }
+    }
+  }
+}

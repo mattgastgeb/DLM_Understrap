@@ -1,0 +1,50 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-weight: lighter;
+
+  .hero-wrapper & {
+    color: $white;
+    font-size: $font-size-base * 2.666;
+    margin-bottom: $grid-gutter-width * 1.5;
+
+    @include media-breakpoint-down(md) {
+      font-size: $font-size-base * 2.25;
+    }
+  }
+}
+
+h2 {
+  color: $primary;
+  font-weight: 300;
+  margin-bottom: $grid-gutter-width * 1.5;
+
+  @include media-breakpoint-down(md) {
+    font-size: $font-size-base * 2;
+  }
+
+  .plans-wrapper & {
+    color: $white;
+    text-align: center;
+  }
+}
+
+h4 {
+  font-weight: bold;
+  color: $tertiary;
+  margin-bottom: $grid-gutter-width;
+
+  @include media-breakpoint-down(md) {
+    font-size: $font-size-base * 1.333;
+  }
+}
+
+ul {
+  padding-left: 32px;
+
+  li {
+    margin-bottom: $grid-gutter-width / 2
+  }
+}

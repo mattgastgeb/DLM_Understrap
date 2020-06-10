@@ -3,14 +3,14 @@
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
 $white:    #fff;
-$gray-100: desaturate(lighten($gray-800, 70), 4);
+$gray-800: #323841;
+$gray-100: desaturate(lighten($gray-800, 75), 4);
 $gray-200: desaturate(lighten($gray-800, 60), 4);
 $gray-300: desaturate(lighten($gray-800, 50), 4);
 $gray-400: desaturate(lighten($gray-800, 40), 4);
 $gray-500: desaturate(lighten($gray-800, 30), 4);
 $gray-600: desaturate(lighten($gray-800, 20), 3);
 $gray-700: desaturate(lighten($gray-800, 10), 2);
-$gray-800: #323841;
 $gray-900: saturate(darken($gray-800, 10), 0);
 
 $primary: #129151;
@@ -20,9 +20,33 @@ $dark: #0B131E;
 
 $body-color:                $gray-800;
 
-$border-radius:               0
+$border-radius:               0;
+$border-radius-lg:            0;
+$border-radius-sm:            0;
+
 
 $grid-gutter-width:           32px;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
 
 $font-family-sans-serif:      "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
@@ -52,4 +76,4 @@ $headings-font-weight:        500;
 $headings-line-height:        1.2;
 $headings-color:              null;
 
-$lead-font-size:              $font-size-base * 1.333;
+$lead-font-size:              ceil($font-size-base * 1.333);

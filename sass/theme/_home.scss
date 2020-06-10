@@ -1,0 +1,361 @@
+.home {
+  .wrapper {
+    padding: 0;
+  }
+
+  .homepage-section-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    padding-top: $grid-gutter-width * 2;
+    padding-bottom: $grid-gutter-width * 2;
+
+    @include media-breakpoint-up(sm) {
+      min-height: 100vh;
+    }
+  }
+
+  .hero-wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+
+    .home-title {
+      padding-left: $grid-gutter-width * 1.5;
+    }
+
+
+    .uagb-section__overlay {
+      opacity: .9 !important;
+      background: linear-gradient(180deg, $primary 0,$secondary 100%);
+
+      @include media-breakpoint-up(sm) {
+        opacity: 1 !important;
+        background: transparent;
+        transform: rotate(-7deg);
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -20%;
+          left: -10%;
+          width: 35%;
+          height: 140%;
+          opacity: .4;
+          background: linear-gradient(180deg,$tertiary 0,$secondary 100%);
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: -20%;
+          left: 25%;
+          width: 85%;
+          height: 140%;
+          opacity: .9;
+          background: linear-gradient(180deg, $primary 0,$secondary 100%);
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        &:before {
+          width: 40%;
+        }
+
+        &:after {
+          left: 30%;
+          width: 80%;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        &:before {
+          width: 60%;
+        }
+
+        &:after {
+          left: 50%;
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .tabs-wrapper {
+    position: relative;
+    z-index: 4;
+
+    &:before,&:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      z-index: -32;
+      box-shadow: 0 0 50px 0 rgba(50,56,65,0.5);
+    }
+
+    &:before {
+      top: -1vw;
+      transform: rotate(-1.5deg);
+    }
+
+    &:after {
+      bottom: -1vw;
+      transform: rotate(1.5deg);
+    }
+
+    .before-tabs-slant {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: #fff;
+
+      &:before,&:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 5vw;
+        background: url(/wp-content/uploads/2020/06/white-triangle.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &:before {
+        background-position: bottom;
+        top: -4.5vw;
+      }
+
+      &:after {
+        background-position: bottom;
+        transform: scaleY(-1);
+        bottom: -4.5vw;
+      }
+    }
+
+    hr {
+      border-bottom: none;
+      border-top: none;
+      height: 6px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: $grid-gutter-width*3;
+
+      &:before {
+        content: '';
+        width: 100%;
+        background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+        height: 6px;
+        position: absolute;
+        transform-origin: top right;
+        transform: rotate(0.3deg);
+      }
+    }
+
+    .advgb-tab-body-wrapper {
+      @include media-breakpoint-up(sm) {
+        min-height: 30vh;
+      }
+
+      // .advgb-tab-body-header {
+      //   font-size: 1.25rem;
+      //   color: $gray-800 !important;
+      //   padding: 0 !important;
+      //
+      //   &:before {
+      //     position: absolute;
+      //     content: "\203A";
+      //     left: -($grid-gutter-width / 2);
+      //     top: -2px;
+      //     color: $primary;
+      //   }
+      //
+      //   &.header-active {
+      //     border-bottom: 3px $primary solid !important;
+      //     font-weight: bold;
+      //     color: $gray-800 !important;
+      //   }
+      // }
+
+      div.advgb-tab-body {
+        padding: 0;
+
+        ul {
+          list-style: none; /* Remove default bullets */
+
+          li::before {
+            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: $primary; /* Change the color */
+            font-weight: normal; /* If you want it to be bold */
+            display: inline-block; /* Needed to add space between the bullet and the text */
+            width: 1em; /* Also needed for space (tweak if needed) */
+            margin-left: -1em; /* Also needed for space (tweak if needed) */
+          }
+        }
+      }
+    }
+
+    .advgb-tabs-panel {
+      margin-bottom: $grid-gutter-width * 2 !important;
+
+      .advgb-tab {
+        background-color: transparent !important;
+        margin: 0;
+        margin-right: $grid-gutter-width * 2;
+        margin-bottom: $grid-gutter-width / 2;
+
+        a {
+          color: $gray-800 !important;
+          padding: 0 !important;
+          font-size: 22px;
+
+          @include media-breakpoint-up(sm) {
+            font-size: 28px;
+          }
+        }
+
+        &.advgb-tab-active {
+          border-bottom: 3px $primary solid !important;
+          background-color: transparent !important;
+
+          a {
+            font-weight: bold;
+            color: $gray-800 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .plans-wrapper {
+    background-color: $secondary;
+    position: relative;
+    z-index: 2;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4.65vw;
+      bottom: -4.65vw;
+      left: 0;
+      background-image: url('/wp-content/uploads/2020/06/bottom-blue-triangle.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top center;
+      z-index: -1;
+    }
+
+    .wp-block-columns {
+      justify-content: center;
+      
+      @include media-breakpoint-up(sm) {
+        margin-bottom: inherit;
+      }
+
+      > div {
+        margin-bottom: $grid-gutter-width;
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: inherit;
+
+          &:nth-child(2) {
+            top: $grid-gutter-width*1.5;
+          }
+        }
+
+        .plans-column-inner {
+          background: #fff;
+          box-shadow: 0 2px 50px 0 rgba(11,19,30,0.5);
+          height: 100%;
+
+
+          > div {
+            padding: 32px;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+          }
+        }
+
+        .wp-block-image {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .contact-wrapper {
+    background: linear-gradient(180deg, #FFFFFF 0%, #DEEAEC 100%);
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      background-image: url('/wp-content/uploads/2020/06/DLM-Symbol_RGB.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 10%;
+      left: -10%;
+      width: 75%;
+      height: 80%;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      background-color: #fff;
+      padding: $grid-gutter-width * 2;
+      box-shadow: 0 0 100px 0 rgba(0,56,73,0.3);
+      z-index: 1;
+
+      .wp-block-columns {
+        margin-bottom: inherit;
+
+        &>div {
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+        }
+
+        form {
+          label {
+            width: 100%;
+
+            .label-text {
+              clip: rect(1px, 1px, 1px, 1px);
+              clip-path: inset(50%);
+              height: 1px;
+              width: 1px;
+              margin: -1px;
+              overflow: hidden;
+              padding: 0;
+              position: absolute;
+            }
+
+            input[type=text],input[type=email],textarea {
+              width: 100%;
+              background-color: $gray-100;
+              border: none;
+              padding: $grid-gutter-width / 2;
+              border-bottom: $secondary 3px solid;
+
+
+              &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: $gray-400;
+                opacity: 1; /* Firefox */
+              }
+            }
+
+            input[type=text],input[type=email] {
+              height: $grid-gutter-width * 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
