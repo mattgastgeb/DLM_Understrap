@@ -156,7 +156,7 @@
 
     .advgb-tab-body-wrapper {
       @include media-breakpoint-up(sm) {
-        min-height: 30vh;
+        min-height: 39vh;
       }
 
       // .advgb-tab-body-header {
@@ -250,7 +250,7 @@
 
     .wp-block-columns {
       justify-content: center;
-      
+
       @include media-breakpoint-up(sm) {
         margin-bottom: inherit;
       }
