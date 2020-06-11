@@ -201,10 +201,21 @@
       margin-bottom: $grid-gutter-width * 2 !important;
 
       .advgb-tab {
+        position: relative;
         background-color: transparent !important;
         margin: 0;
         margin-right: $grid-gutter-width * 2;
         margin-bottom: $grid-gutter-width / 2;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 3px;
+          background: #129151;
+          bottom: -2px;
+          transition: .5s width ease;
+        }
 
         a {
           color: $gray-800 !important;
@@ -217,8 +228,12 @@
         }
 
         &.advgb-tab-active {
-          border-bottom: 3px $primary solid !important;
+          border-bottom: none !important;
           background-color: transparent !important;
+
+          &:before {
+            width: 100%;
+          }
 
           a {
             font-weight: bold;
