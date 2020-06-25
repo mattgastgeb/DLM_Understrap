@@ -36,7 +36,32 @@ foreach ( $understrap_includes as $file ) {
 
 function wpb_add_google_fonts() {
 
-wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400&display=swap', false ); 
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400&display=swap', false );
 }
 
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+Function gtm_head_code(){
+?>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P66B3WV');</script>
+<!-- End Google Tag Manager -->
+<?php
+}
+
+add_action( 'wp_head', 'gtm_head_code', -10);
+
+Function gtm_body_code(){
+?>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P66B3WV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<?php
+}
+
+add_action( 'wp_footer', 'gtm_body_code' );
