@@ -1,13 +1,10 @@
 /*
-Theme Name: UnderStrap
-Theme URI: http://understrap.com
-Author: Holger Koenemann
-Author URI: http://www.holgerkoenemann.de
-GitHub Theme URI: https://github.com/understrap/understrap
-Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid starting point for your next theme project and WordPress website. Use it as starter theme or as a parent theme. It is up to you. Including Font Awesome support, built-in widget slider and much more you need for basic websites. IMPORTANT: All developer dependencies are not bundled with this install file. Just download the .zip, extract it and run "npm install" and "gulp copy-assets" inside the extracted /understrap folder.
-That downloads everything and moves it in place so that you can recompile your CSS and JS files;
-A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/understrap/understrap
-A child theme is available on Github, too: https://github.com/understrap/understrap-child;
+Theme Name: DLM_UnderStrap
+Author: Matt Gastgeb
+Author URI: https://mattgastgeb.com
+GitHub Theme URI: https://https://github.com/mattgastgeb/DLM_Understrap
+Description: This is a customized version of the UnderStrap theme that utilizes Bootstrap 4. Additional javascript and SCSS has been added to stylize the homepage. Page editing is done in the default Gutenberg editor plus some additional blocks plugins.
+The starter theme is UnderStrap: https://github.com/understrap/understrap
 Version: 0.9.4
 License: UnderStrap WordPress Theme, Copyright 2013-2017 Holger Koenemann
 UnderStrap is distributed under the terms of the GNU GPL version 2

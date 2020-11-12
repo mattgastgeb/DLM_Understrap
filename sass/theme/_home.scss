@@ -414,10 +414,23 @@
       color: $white;
     }
 
-    .wp-block-columns > div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .wp-block-columns {
+      margin-bottom: 0;
+      
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: $grid-gutter-width;
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: inherit;
+
+          &:nth-child(2) {
+            top: $grid-gutter-width*1.5;
+          }
+        }
+      }
     }
   }
 }
@@ -425,4 +438,4 @@
 @keyframes cf7confirmation {
   from {opacity:0;}
   to {opacity: 1;}
-} 
+}

@@ -167,5 +167,17 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			)
 		);
 
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer Bottom', 'understrap' ),
+				'id'            => 'footerbottom',
+				'description'   => __( 'Full-width footer at bottom', 'understrap' ),
+				'before_widget' => '<div>',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
 	}
 } // endif function_exists( 'understrap_widgets_init' ).
