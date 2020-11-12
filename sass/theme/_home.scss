@@ -404,6 +404,22 @@
       }
     }
   }
+
+  #calculators {
+    background: $primary;
+    padding: $grid-gutter-width;
+    color: $white;
+
+    h4 {
+      color: $white;
+    }
+
+    .wp-block-columns > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 }
 
 @keyframes cf7confirmation {
