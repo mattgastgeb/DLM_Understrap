@@ -65,3 +65,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 
 add_action( 'wp_footer', 'gtm_body_code' );
+
+Function material_icon(){
+	?>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<?php
+}
+
+add_action( 'wp_head', 'material_icon');

@@ -416,7 +416,7 @@
 
     .wp-block-columns {
       margin-bottom: 0;
-      
+
       > div {
         display: flex;
         flex-direction: column;
@@ -425,10 +425,6 @@
 
         @include media-breakpoint-up(lg) {
           margin-bottom: inherit;
-
-          &:nth-child(2) {
-            top: $grid-gutter-width*1.5;
-          }
         }
       }
     }

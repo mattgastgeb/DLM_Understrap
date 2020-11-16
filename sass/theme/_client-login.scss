@@ -1,0 +1,108 @@
+.client-login-overlay {
+  background: linear-gradient(-180deg, rgb(1, 126, 152) 0%, rgb(18,145,81) 100%);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  z-index: 1;
+  padding-bottom: $grid-gutter-width * 2;
+  animation: fadeIn .5s 1;
+
+  // @include media-breakpoint-up(sm) {
+    min-height: 100vh;
+  // }
+
+  .wp-block-group__inner-container {
+    @include make-container();
+    @include media-breakpoint-up(sm) {max-width: 540px}
+    @include media-breakpoint-up(md) {max-width: 720px}
+    @include media-breakpoint-up(lg) {max-width: 960px}
+    @include media-breakpoint-up(xl) {max-width: 1140px}
+
+  }
+
+  h2, h5 {
+    color: #fff;
+    margin-bottom: $grid-gutter-width * 2;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .logo-row {
+    padding-top: $grid-gutter-width * 2;
+    padding-bottom: $grid-gutter-width * 3;
+
+    button {
+      margin-left: auto;
+      background: none;
+      height: 48px;
+      width: 48px;
+      position: relative;
+      top: -10px;
+
+      &:before, &:after {
+        content: "";
+        background: $white;
+        position: relative;
+        height: 46px;
+        width: 3px;
+        display: block;
+        left: 16px;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        top: -46px;
+      }
+
+      &:focus {
+        outline: 2px solid $white;;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .links-columns {
+    margin-right: -($grid-gutter-width);
+    margin-left: -($grid-gutter-width);
+
+    .wp-block-column {
+      padding-top: $grid-gutter-width * 2;
+      padding-bottom: $grid-gutter-width * 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-right: $grid-gutter-width;
+      padding-left: $grid-gutter-width;
+
+      &:not(:first-child) {
+        margin-left: 0 !important;
+      }
+
+      &:last-child {
+        @include media-breakpoint-up(sm) {border-left: 1px solid $white}
+      }
+    }
+  }
+}
+
+.wp-post-modal.show > .close-modal {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+    // transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    // transform: translateY(0);
+  }
+}

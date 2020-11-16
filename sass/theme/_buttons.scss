@@ -13,13 +13,37 @@
 .btn-white {
   background-color: $white;
   color: $secondary;
+
+  &.external-link {
+    &:after {
+      content: "";
+      background: url("/wp-content/themes/understrap/images/ext-blue.svg");
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 21px;
+      display: inline-block;
+      margin-left: 8px;
+    }
+  }
 }
 
 .btn-white-green {
   background-color: $white;
   color: $primary;
+
+  &.external-link {
+    &:after {
+      content: "";
+      background: url("/wp-content/themes/understrap/images/ext-green.svg");
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 21px;
+      display: inline-block;
+      margin-left: 8px;
+    }
+  }
 }
 
 .btn-lg {
-  padding: .5rem 1.75rem;
-} 
+  padding: .5rem 1.5rem;
+}
