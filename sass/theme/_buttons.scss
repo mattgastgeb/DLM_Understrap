@@ -17,7 +17,7 @@
   &.external-link {
     &:after {
       content: "";
-      background: url("/wp-content/themes/understrap/images/ext-blue.svg");
+      background: url("../images/ext-blue.svg");
       background-repeat: no-repeat;
       width: 20px;
       height: 21px;
@@ -34,7 +34,7 @@
   &.external-link {
     &:after {
       content: "";
-      background: url("/wp-content/themes/understrap/images/ext-green.svg");
+      background: url("../images/ext-green.svg");
       background-repeat: no-repeat;
       width: 20px;
       height: 21px;
