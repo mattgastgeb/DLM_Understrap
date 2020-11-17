@@ -18,7 +18,7 @@
   });
 
   $(document).on('scroll', function(){
-    var heroHeight = ($('.hero-wrapper').height() / 2);
+    var heroHeight = ($('.hero-wrapper').height() / 8);
 
     if($('body').hasClass('home')) {
       if($(document).scrollTop()>=heroHeight) {
