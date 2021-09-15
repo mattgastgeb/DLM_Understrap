@@ -17,6 +17,40 @@
     }
   });
 
+  // Check to see if item is in the view port
+  $.fn.isInViewport = function() {
+    var object = $(this);
+    if (object.length) {
+      var elementTop = object.offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var windowTop = $(window).scrollTop();
+      var windowBottom = windowTop + $(window).height();
+
+      return elementBottom > windowTop && elementTop < windowBottom;
+    }
+  };
+
+  // Animate things in center of viewport on scroll
+    $(window).on('resize scroll', function() {
+      $('.position-animate-this').each(function() {
+        if ($(this).isInViewport()) {
+          $(this).addClass('animate');
+        }
+      });
+    });
+
+  // Animate things in center of viewport on document load
+    $(document).ready(function() {
+      $('.position-animate-this').each(function() {
+        if ($(this).isInViewport()) {
+          setTimeout(function(){
+            $(this).addClass('animate');
+          }, 1000);
+        }
+      });
+    });
+
   $(document).on('scroll', function(){
     var heroHeight = ($('.hero-wrapper').height() / 8);
 

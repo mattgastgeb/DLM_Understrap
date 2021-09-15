@@ -16,6 +16,7 @@
     }
   }
 
+// ------------------------------ HERO ------------------------------
   .hero-wrapper {
     overflow: hidden;
     min-height: 100vh;
@@ -80,6 +81,9 @@
       }
     }
   }
+
+  // ------------------------------ tabs ------------------------------
+
 
   .tabs-wrapper {
     position: relative;
@@ -221,6 +225,11 @@
           color: $gray-800 !important;
           padding: 0 !important;
           font-size: 22px;
+          transition: .25s ease-in-out;
+
+          &:hover {
+            color: $primary !important;
+          }
 
           @include media-breakpoint-up(sm) {
             font-size: 28px;
@@ -243,6 +252,9 @@
       }
     }
   }
+
+  // ------------------------------ PLANS ------------------------------
+
 
   .plans-wrapper {
     background-color: $secondary;
@@ -272,6 +284,9 @@
 
       > div {
         margin-bottom: $grid-gutter-width;
+        opacity: 0;
+        transform: translateY($grid-gutter-width * -1);
+        transition: .5s ease-in-out;
 
         @include media-breakpoint-up(lg) {
           margin-bottom: inherit;
@@ -299,8 +314,25 @@
           margin: 0;
         }
       }
+
+      &.animate {
+        > div {
+          opacity: 1;
+          transform: translateY(0);
+
+          &:nth-child(2) {
+            transition-delay: .35s;
+          }
+
+          &:nth-child(3) {
+            transition-delay: .7s;
+          }
+        }
+      }
     }
   }
+
+  // ------------------------------ PLATFORM ------------------------------
 
   .platform-wrapper {
     padding-top: $grid-gutter-width * 4;
@@ -313,7 +345,7 @@
       position: absolute;
       width: 100%;
       height: 4.65vw;
-      bottom: -4.65vw;
+      bottom: -4.63vw;
       left: 0;
       background-image: url('/wp-content/uploads/2021/09/bottom-dark-blue-triangle.svg');
       background-repeat: no-repeat;
@@ -343,7 +375,7 @@
       .vertical-line {
         border-left: 3px solid $secondary;
         height: 5vh;
-        margin-bottom: 3rem
+        margin-bottom: 3rem;
       }
 
       .horizontal-line {
@@ -396,8 +428,45 @@
           }
         }
       }
+
+
+      > * {
+        opacity: 0;
+        transition: .5s ease-in-out;
+
+        &:nth-child(2) {
+          transition-delay: .5s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 1s;
+        }
+
+        &:nth-child(4) {
+          transition-delay: 1.5s;
+        }
+
+        &:nth-child(5) {
+          transition-delay: 2s;
+        }
+      }
+
+      .kestra .col-md-4:nth-child(1), .kestra .col-md-4:nth-child(3) {
+        opacity: 0;
+        transition: .5s ease-in-out;
+        transition-delay: 2.5s;
+      }
+    }
+
+    .platform-diagram.animate .wp-block-group__inner-container {
+      > *, .kestra .col-md-4:nth-child(1), .kestra .col-md-4:nth-child(3) {
+        opacity: 1;
+      }
     }
   }
+
+  // ------------------------------ CONTACT ------------------------------
+
 
   .contact-wrapper {
     background: linear-gradient(180deg, #FFFFFF 0%, #DEEAEC 100%);
@@ -425,6 +494,10 @@
       background-color: #fff;
       padding: $grid-gutter-width * 2;
       box-shadow: 0 0 100px 0 rgba(0,56,73,0.3);
+      opacity: 0;
+      transform: translateX($grid-gutter-width * 2);
+      transition: 1s ease-in-out;
+      transition-delay: .5s;
       z-index: 10;
 
       .wp-block-columns {
@@ -499,6 +572,11 @@
           }
         }
       }
+    }
+
+    &.animate .container {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
