@@ -25,7 +25,7 @@
     }
 
     ul li {
-      margin: 0 $grid-gutter-width;
+      margin: 0 ($grid-gutter-width / 2);
 
       &.btn-menu a {
         background-color: rgba(255,255,255,0.75);
