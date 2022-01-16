@@ -13,10 +13,10 @@ $gray-600: desaturate(lighten($gray-800, 20), 3);
 $gray-700: desaturate(lighten($gray-800, 10), 2);
 $gray-900: saturate(darken($gray-800, 10), 0);
 
-$primary: #129151;
-$secondary: #017E98;
-$tertiary: #003849;
-$dark: #0B131E;
+$primary: #129151; //green
+$secondary: #017E98; //light blue
+$tertiary: #003849; //dark blue
+$dark: #0B131E; //darkest blue
 
 $body-color:                $gray-800;
 

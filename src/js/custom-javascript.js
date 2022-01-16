@@ -3,7 +3,7 @@
     $(".remove-inner>div>div").unwrap();
     $(".add-inner-bootstrap-container>.wp-block-group__inner-container").addClass("container");
     $(".wp-block-columns>div").removeClass("wp-block-column");
-    $(".home .wpcf7").removeClass("wpcf7");
+    $(".contact-wrapper .wpcf7").removeClass("wpcf7");
     $(".advgb-tab-horz-desktop.advgb-tab-stack-mobile.advgb-tab-vert-tablet.advgb-tabs-wrapper.wp-block-advgb-adv-tabs").removeClass().addClass("advgb-tab-horz-desktop advgb-tab-stack-mobile advgb-tab-vert-tablet advgb-tabs-wrapper wp-block-advgb-adv-tabs");
     $(".plans-wrapper .wp-block-columns > div").wrapInner("<div class=\"plans-column-inner\"></div>");
     $(".tabs-wrapper").prepend("<div class=\"before-tabs-slant\">").append("<div class=\"after-tabs-slant\">");

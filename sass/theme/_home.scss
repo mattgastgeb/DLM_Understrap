@@ -276,20 +276,13 @@
     }
 
     .wp-block-columns {
-      justify-content: center;
-
-      @include media-breakpoint-up(sm) {
-        margin-bottom: inherit;
-      }
 
       > div {
-        margin-bottom: $grid-gutter-width;
         opacity: 0;
         transform: translateY($grid-gutter-width * -1);
         transition: .5s ease-in-out;
 
         @include media-breakpoint-up(lg) {
-          margin-bottom: inherit;
 
           &:nth-child(2) {
             top: $grid-gutter-width*1.5;
@@ -431,7 +424,7 @@
 
 
       > * {
-        opacity: 0;
+        ;
         transition: .5s ease-in-out;
 
         &:nth-child(2) {
@@ -452,7 +445,7 @@
       }
 
       .kestra .col-md-4:nth-child(1), .kestra .col-md-4:nth-child(3) {
-        opacity: 0;
+        ;
         transition: .5s ease-in-out;
         transition-delay: 2.5s;
       }
@@ -465,120 +458,6 @@
     }
   }
 
-  // ------------------------------ CONTACT ------------------------------
-
-
-  .contact-wrapper {
-    background: linear-gradient(180deg, #FFFFFF 0%, #DEEAEC 100%);
-    position: relative;
-    z-index: 10;
-
-    &:before {
-      content: '';
-      background-image: url('/wp-content/uploads/2020/06/DLM-Symbol_RGB.svg');
-      background-repeat: no-repeat;
-      background-size: 65% 100%;
-      background-position-y: center;
-      background-position-x: -35%;
-      background-attachment: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 0;
-    }
-
-    .container {
-      position: relative;
-      background-color: #fff;
-      padding: $grid-gutter-width * 2;
-      box-shadow: 0 0 100px 0 rgba(0,56,73,0.3);
-      opacity: 0;
-      transform: translateX($grid-gutter-width * 2);
-      transition: 1s ease-in-out;
-      transition-delay: .5s;
-      z-index: 10;
-
-      .wp-block-columns {
-        margin-bottom: inherit;
-
-        &>div {
-          justify-content: center;
-          display: flex;
-          flex-direction: column;
-        }
-
-        form {
-
-          &.sent .home-contact-fields {
-            display: none;
-          }
-          label {
-            width: 100%;
-
-            .label-text {
-              clip: rect(1px, 1px, 1px, 1px);
-              clip-path: inset(50%);
-              height: 1px;
-              width: 1px;
-              margin: -1px;
-              overflow: hidden;
-              padding: 0;
-              position: absolute;
-            }
-
-            input[type=text],input[type=email],textarea {
-              width: 100%;
-              background-color: $gray-100;
-              border: none;
-              padding: $grid-gutter-width / 2;
-              border-bottom: $secondary 3px solid;
-
-
-              &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                color: $gray-400;
-                opacity: 1; /* Firefox */
-              }
-            }
-
-            input[type=text],input[type=email] {
-              height: $grid-gutter-width * 2;
-            }
-          }
-        }
-
-        .screen-reader-response {
-          position: absolute;
-          overflow: hidden;
-          clip: rect(1px, 1px, 1px, 1px);
-          height: 1px;
-          width: 1px;
-          margin: 0;
-          padding: 0;
-          border: 0;
-        }
-
-        div.wpcf7-mail-sent-ok {
-          font-weight: bold;
-          font-style: italic;
-          border: none;
-          margin: 0;
-          font-size: 28px;
-          animation: cf7confirmation 2s 1;
-
-          @include media-breakpoint-up(md) {
-            padding: ($grid-gutter-width * 5) 0;
-          }
-        }
-      }
-    }
-
-    &.animate .container {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
 
   #calculators {
     background: $primary;

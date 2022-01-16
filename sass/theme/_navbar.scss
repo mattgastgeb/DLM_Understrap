@@ -46,6 +46,29 @@
         line-height: 23px;
         color: $gray-800;
         transition: .1s color linear;
+        position: relative;
+
+        &:after {
+          position: relative;
+          display: block;
+          content: "";
+          width: 0%;
+          height: 4px;
+          background-color: $primary;
+          transition: .25s ease-in-out;
+        }
+
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+
+      &.active a {
+        &:after {
+          width: 100%;
+        }
       }
     }
   }
