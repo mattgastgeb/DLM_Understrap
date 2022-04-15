@@ -70,7 +70,7 @@
       margin-left: -($grid-gutter-width);
     }
 
-    div[class^="col-"] {
+    div[class^="col-"], .col-md-4, .col-md-6 {
       padding-top: $grid-gutter-width;
       padding-bottom: $grid-gutter-width;
       display: flex;
