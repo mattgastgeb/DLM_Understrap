@@ -71,7 +71,7 @@
     }
 
     div[class^="col-"] {
-      padding-top: $grid-gutter-width; 
+      padding-top: $grid-gutter-width;
       padding-bottom: $grid-gutter-width;
       display: flex;
       flex-direction: column;
@@ -83,6 +83,7 @@
         padding-bottom: $grid-gutter-width * 2;
         padding-right: $grid-gutter-width;
         padding-left: $grid-gutter-width;
+        border-left: 1px solid $white
 
       }
 
@@ -91,7 +92,12 @@
 
         @include media-breakpoint-up(md) {
           margin-top: 0;
-          border-left: 1px solid $white
+        }
+      }
+
+      &:first-child {
+        @include media-breakpoint-up(md) {
+          border-left: none;
         }
       }
     }
