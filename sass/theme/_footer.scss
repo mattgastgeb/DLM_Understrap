@@ -24,6 +24,10 @@
   .disclaimer {
     margin-bottom: ($grid-gutter-width * 2);
 
+    a {
+      color: $white;
+    }
+
     p {
       font-size: 0.75rem;
 
