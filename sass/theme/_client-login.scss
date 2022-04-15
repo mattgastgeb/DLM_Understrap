@@ -68,9 +68,9 @@
     @include media-breakpoint-up(md) {
       margin-right: -($grid-gutter-width);
       margin-left: -($grid-gutter-width);
-    } 
+    }
 
-    .col-md-6 {
+    div[class^="col-"] {
       padding-top: $grid-gutter-width;
       padding-bottom: $grid-gutter-width;
       display: flex;
